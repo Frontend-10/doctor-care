@@ -96,7 +96,7 @@ body {
 }
 
 .title {
-    color:#00FF00;
+    color: #00FF00;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -148,16 +148,17 @@ ul li {
     margin: 4% 2%;
     padding: 1%;
     float: right;
-
+    text-align: left;
 }
 
 .time-line__item:nth-of-type(2n) {
     float: left;
     margin: 4% 2%;
     padding: 1%;
+    text-align: right;
 }
 
-.time-line__item p {
+.time-line__item label {
     color: #f0f0f0;
     text-align: center;
 }
@@ -165,4 +166,12 @@ ul li {
 .time-line__item p a {
     color: #e44b4b;
     text-align: center;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked~label {
+    text-decoration: line-through;
 }
