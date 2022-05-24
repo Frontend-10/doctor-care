@@ -1,10 +1,16 @@
 .nav {
     background-color: var(--brand-green-light);
-    width: 100vw;
-    
+
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: var(--nav-height);
 }
 
 .nav.scroll {
@@ -19,14 +25,6 @@
     stroke: var(--white);
 }
 
-.nav__box {
-    height: var(--nav-height);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .nav__button {
     background-color: transparent;
     border: none;
@@ -38,6 +36,13 @@
 }
 
 /* Menu expanded */
+.menu-expanded {
+    overflow: hidden;
+}
+
+.menu-expanded > :not(.nav){
+    display: none;
+}
 
 .menu-expanded .nav__menu, .menu-expanded .nav__button--close  {
     display: initial;
@@ -45,14 +50,6 @@
 
 .menu-expanded .nav__button--open {
     display: initial;
-}
-
-.menu-expanded {
-    overflow: hidden;
-}
-
-.menu-expanded > :not(.nav){
-    display: none;
 }
 
 .menu-expanded .nav {
@@ -75,10 +72,10 @@
     position: absolute;
     top: var(--nav-height);
     left: 0;
+    z-index: 1;
 
     width: 100vw;
     height: 100vh;
-    z-index: 1;
 }
 
 .nav__list {
@@ -91,14 +88,10 @@
 }
 
 .nav__item {
+    color: var(--white);
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
-    color: var(--white);
-}
-
-.nav__btn {
-    display: inline-block;
 }
 
 .nav__social {
@@ -106,12 +99,3 @@
     justify-content: center;
     gap: 3.2rem;
 }
-
-.nav__close-menu {
-    background-color: transparent;
-    border: none;
-}
-
-
-
-

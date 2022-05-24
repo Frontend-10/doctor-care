@@ -1,20 +1,22 @@
-.header.container {
+.header {
     text-align: center;
-    padding-top: calc(var(--nav-height) + 4.2rem);
+
+    margin-top: calc(var(--nav-height) + 4.2rem);
 }
 
 .header::before {
-    content: "";
-    width: 100%;
-    height: calc(108rem + var(--nav-height));
     background-color: var(--brand-green-light);
-
-    display: block;
-
+    content: "";
+    
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+
+    display: block;
+
+    height: calc(108rem + var(--nav-height));
+    width: 100%;
 }
 
 .header__text {
@@ -25,26 +27,29 @@
 }
 
 .header__button {
-    margin: 0 auto 40.2rem;
-
+    display: flex;
+    align-items: center;
     gap: 1.6rem;
+
+    margin: 0 auto 40.2rem;
 }
 
 .stats::before {
-    content: "";
     background: url("../img/woman.png") no-repeat center;
+    content: "";
     
-    width: 26.1rem;
-    height: 34.2rem;
     position: absolute;
     top: -34.2rem;
     left: 50%;
     transform: translateX(-50%);
+    
+    height: 34.2rem;
+    width: 26.1rem;
 }
 
 .stats {
     background-color: var(--brand-beige);
-    border: 1px solid #DCE9E2;
+    border: .1rem solid var(--brand-green-light);
     border-radius: .6rem;
 
     position: relative;
