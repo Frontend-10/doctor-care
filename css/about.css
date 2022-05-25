@@ -1,0 +1,22 @@
+.about {
+    background-color: var(--brand-beige);
+}
+
+.about__title {
+    text-align: left;
+
+    margin-bottom: 2.4rem;
+}
+
+.about__subtitle {
+    text-align: left;
+}
+
+.about__img {
+    background: url("../img/doutor-segunrando-uma-prancheta-e-sorrindo-enquanto-atende-uma-paciente-crianca-acompanhada-da-mae-ambas-sorrindo.png") no-repeat center / contain;
+    
+    width: 32.7rem;
+    height: 28.2rem;
+    
+    margin-top: 6rem;
+}

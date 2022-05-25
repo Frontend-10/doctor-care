@@ -23,6 +23,10 @@
     font-size: 62.5%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--brand-green-light-02);
 
@@ -45,22 +49,22 @@ a {
     text-decoration: none;
 }
 
-body section {
-    margin-block: 10rem;
+body > section {
+    padding-block: 10rem;
 }
 
 .container {
-    min-width: 37.5rem;
+    width: 37.5rem;
     padding: 0 2.4rem;
+    margin: 0 auto;
 }
 
 .title {
     color: var(--gray-headline);
     font-weight: 700;
-    font-size: 3.4rem;
-    line-height: 4.4rem;
-    
-    margin-bottom: 2.4rem;
+    font-size: 3rem;
+    line-height: 3.9rem;
+    text-align: center;
 }
 
 .subtitle {
@@ -69,9 +73,16 @@ body section {
     font-size: 1.4rem;
     line-height: 2.1rem;
     letter-spacing: 0.08rem;
+    text-align: center;
     text-transform: uppercase;
-    
-    padding-bottom: 1.6rem;
+
+    margin-bottom: 1.6rem;
+}
+
+.text-generic {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
 }
 
 .button {
@@ -84,6 +95,8 @@ body section {
     line-height: 1.8rem;
     text-transform: uppercase;
 
+    width: fit-content;
+
     padding: 1.6rem 3.2rem;
 }
 
@@ -91,6 +104,17 @@ body section {
     background-color: var(--brand-green);
 
     color: var(--white);
+
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    transition: background-color 200ms;
+}
+
+.button--primary:hover {
+    background-color: var(--brand-green-hover);
+    
 }
 
 .button--secondary {
@@ -99,4 +123,18 @@ body section {
     border-radius: 4rem;
 
     color: var(--brand-green);
+}
+
+#backToTop {
+    transform: translateY(100%);
+}
+
+#backToTop.show {
+    position: fixed;
+    right: 2.5rem;
+    bottom: 1rem;
+
+    transform: translateY(0);
+
+    transition: transform 300ms;
 }

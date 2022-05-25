@@ -1,0 +1,28 @@
+.contact__title {
+    text-align: left;
+
+    margin-bottom: 3.2rem;
+}
+
+.contact__address {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    margin-bottom: 3.2rem;
+}
+
+.contact__item {
+    display: flex;
+    gap: .8rem;
+}
+
+
+.contact__img {
+    background: url("../img/homem-de-moletom-bege-sorrindo-enquanto-usa-seu-smartphone.png") no-repeat center / contain;
+    
+    width: 32.4rem;
+    height: 21.3rem;
+
+    margin-top: 6rem;
+}

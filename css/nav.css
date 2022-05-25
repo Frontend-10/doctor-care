@@ -1,11 +1,12 @@
 .nav {
-    background-color: var(--brand-green-light);
-
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 1;
     
+    width: 100vw;
+}
+
+.nav .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,6 +16,8 @@
 
 .nav.scroll {
     background-color: var(--brand-green);
+    
+    transition: background-color 1s;
 }
 
 .nav.scroll .nav__logo path {
@@ -31,8 +34,18 @@
     cursor: pointer;
 }
 
-.nav__menu, .nav .nav__button--close {
+.nav__button--close {
     display: none;
+}
+
+.nav__menu {
+    opacity: 0;
+    visibility: hidden;
+    
+    position: absolute;
+    transform: translateY(-100%);
+
+    transition: transform 300ms;
 }
 
 /* Menu expanded */
@@ -41,15 +54,16 @@
 }
 
 .menu-expanded > :not(.nav){
-    display: none;
+    visibility: hidden;
 }
 
-.menu-expanded .nav__menu, .menu-expanded .nav__button--close  {
+.menu-expanded .nav__button--close  {
     display: initial;
 }
 
 .menu-expanded .nav__button--open {
-    display: initial;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .menu-expanded .nav {
@@ -64,18 +78,23 @@
     stroke: var(--white);
 }
 
-.nav__menu {
-    background-color: var(--brand-green);
+.menu-expanded .nav__menu {
+    background: var(--brand-green);
+    opacity: 1;
+    visibility: visible;
     
-    text-align: center;
-
     position: absolute;
-    top: var(--nav-height);
     left: 0;
-    z-index: 1;
-
+    top: 0;
+    transform: translateY(0);
+    z-index: -1;
+  
     width: 100vw;
     height: 100vh;
+    text-align: center;
+    padding-top: var(--nav-height);
+
+    transition: transform 300ms;
 }
 
 .nav__list {

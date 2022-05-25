@@ -1,0 +1,23 @@
+.footer {
+    background-color: var(--brand-green);
+}
+
+.footer .container {
+    padding: 6rem 2.4rem;
+}
+
+.footer__logo {
+    margin-bottom: 2.4rem;
+}
+
+.footer__text {
+    color: var(--white);
+
+    margin-bottom: 1.2rem;
+}
+
+.footer .nav__social {
+    justify-content: flex-start;
+    
+    margin-top: 3.2rem;
+}

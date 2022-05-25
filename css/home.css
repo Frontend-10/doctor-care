@@ -1,10 +1,11 @@
-.header {
+.home {
     text-align: center;
 
-    margin-top: calc(var(--nav-height) + 4.2rem);
+    padding-top: calc(var(--nav-height) + 4.2rem);
+    padding-bottom: 0;
 }
 
-.header::before {
+.home::before {
     background-color: var(--brand-green-light);
     content: "";
     
@@ -19,23 +20,26 @@
     width: 100%;
 }
 
-.header__text {
+.home__title {
+    font-size: 3.4rem;
+    line-height: 4.4rem;
+
+    margin-bottom: 2.4rem;
+}
+
+.home__paragraph {
     font-size: 1.8rem;
     line-height: 2.7rem;
     
     margin-bottom: 3.2rem;
 }
 
-.header__button {
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-
+.home__button {
     margin: 0 auto 40.2rem;
 }
 
-.stats::before {
-    background: url("../img/woman.png") no-repeat center;
+.home__stats::before {
+    background: url("../img/mulher-de-moletom-verde-com-as-maos-sobre-peito-e-sorrindo.png") no-repeat center / cover;
     content: "";
     
     position: absolute;
@@ -47,7 +51,7 @@
     width: 26.1rem;
 }
 
-.stats {
+.home__stats {
     background-color: var(--brand-beige);
     border: .1rem solid var(--brand-green-light);
     border-radius: .6rem;
